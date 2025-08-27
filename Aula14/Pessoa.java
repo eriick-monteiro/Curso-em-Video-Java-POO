@@ -4,6 +4,13 @@ public class Pessoa {
     protected String sexo;
     protected int experiencia;
 
+    public Pessoa(String nome, int idade, String sexo) {
+        this.nome = nome;
+        this.idade = idade;
+        this.sexo = sexo;
+        this.experiencia = 0;
+    }
+
     public String getNome() {
         return nome;
     }
@@ -38,5 +45,15 @@ public class Pessoa {
 
     public void ganharExp(int exp) {
         this.setExperiencia(this.getExperiencia() + 1);
+    }
+
+    @Override
+    public String toString() {
+        return "Pessoa{" +
+                "nome='" + nome + '\'' +
+                ", idade=" + idade +
+                ", sexo='" + sexo + '\'' +
+                ", experiencia=" + experiencia +
+                '}';
     }
 }
